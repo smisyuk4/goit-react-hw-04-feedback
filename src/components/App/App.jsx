@@ -13,15 +13,15 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const incrementGood = () => {
-    setGood( good + 1)
+    setGood(prevState => prevState + 1)
   };
 
   const incrementNeutral = () => {
-    setNeutral( neutral + 1)
+    setNeutral( prevState => prevState + 1)
   };
 
   const incrementBad = () => {
-    setBad( bad + 1)
+    setBad(prevState => prevState + 1)
   };
 
   const sum = countTotalFeedback(good, neutral, bad)
